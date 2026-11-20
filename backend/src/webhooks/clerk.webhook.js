@@ -25,7 +25,7 @@ router.post("/", async (req, res) => {
 
         if (evt.type === "user.created" || evt.type === "user.updated") {
             const u = evt.data;
-
+            
             const email =
                 u.email_addresses?.find((e) => e.id === u.primary_email_address_id)?.email_address ??
                 u.email_addresses?.[0]?.email_address;
