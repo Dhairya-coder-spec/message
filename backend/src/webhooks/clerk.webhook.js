@@ -49,6 +49,6 @@ router.post("/", async (req, res) => {
         console.error("Error in Clerk webhook:", error);
         res.status(400).json({ message: "Webhook verification failed" });
     }
-})
+});
 
 export default router;
